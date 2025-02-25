@@ -1,0 +1,29 @@
+version = 1
+
+# Define analyzers (to be used in your Java code)
+[[analyzers]]
+name = "java"
+enabled = true
+rules = [
+  "avoid-print-statement",            # Avoid using System.out.println
+  "detect-loggers-in-place-of-prints", # Make sure logs are used instead of prints
+  "detect-nullpointerexception",      # Detect potential null pointer exceptions
+  "simplify-boolean-expressions",     # Simplify boolean expressions
+  "prefer-try-with-resources",        # Prefer try-with-resources to manage resources
+  "simplify-conditional-expressions", # Simplify complex conditional expressions
+  "avoid-duplicate-code",             # Detect duplicate code blocks
+  "use-final-variables",              # Recommend final for variables that are never reassigned
+  "avoid-empty-catch-blocks",         # Avoid empty catch blocks, as they can hide potential issues
+  "simplify-if-statements",           # Simplify unnecessary if conditions
+  "avoid-deprecated-methods",         # Avoid using deprecated methods or APIs
+  "detect-unused-imports",            # Detect and remove unused imports
+  "enforce-immutable-objects",        # Encourage immutability for better maintainability
+  "use-for-each-loop",                # Suggest for-each loop for collections and arrays
+  "prefer-collections",               # Prefer collections over arrays wherever possible
+  "detect-magic-numbers",             # Detect the usage of "magic" numbers (hard-coded values)
+  "enforce-exceptions-best-practices",# Enforce best practices for exception handling
+]
+
+# Optional: Configuration for auto-fixing code issues
+[fixes]
+enabled = true
