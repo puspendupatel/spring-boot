@@ -13,7 +13,7 @@ jobs:
     runs-on: ${{ vars.UBUNTU_MEDIUIM || 'ubuntu-latest' }}
     steps:
       - name: Check Out Code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Build and Publish
         id: build-and-publish
         uses: ./.github/actions/build
@@ -83,7 +83,7 @@ jobs:
     runs-on: ${{ vars.UBUNTU_SMALL || 'ubuntu-latest' }}
     steps:
       - name: Check Out Code
-        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+        uses: actions/checkout@ff7abcd0c3c05ccf6adc123a8cd1fd4fb30fb493 # v4.1.1
       - name: Create GitHub Release
         uses: ./.github/actions/create-github-release
         with:
